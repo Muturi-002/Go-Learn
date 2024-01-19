@@ -10,7 +10,7 @@ import(
 func main(){
 	err:=errors.New("Booom")
 	fmt.Println("The bomb goes", err)
-	fmt.Printf("The bomb goes %v\n", err)
+	
 	var F_name string
 	var L_name string
 	
