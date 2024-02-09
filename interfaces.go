@@ -5,6 +5,10 @@ type School struct {
 	name string
 	location string
 }
+type school interface{
+	display()
+	blank()
+}
 func (a School) display(){
 	fmt.Println("Name:",a.name, "\nLocation:",a.location)
 }
@@ -12,10 +16,6 @@ func (a School) blank(){
 	a.name= ""
 	a.location= ""
 	fmt.Println("Name:",a.name, "\nLocation:",a.location)
-}
-type school interface{
-	display()
-	blank()
 }
 func main() {
 	defer fmt.Println("---INTERFACES---")
