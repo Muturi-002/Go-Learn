@@ -14,7 +14,7 @@ func main() {
 
 type Student struct {
 	name        string
-	Regno       int
+	Regno       string
 	class       string
 	stream      string
 	entry_marks int
@@ -26,7 +26,8 @@ func (s Student) Details() {
 	Reg:
 	fmt.Println("Enter Registration Number:")
 	fmt.Scanln(&s.Regno)
-	S,err:= strconv.Itoa(s.Regno)
+	//check conversion type
+	S,err:= strconv.Atoi(s.Regno)
 	if err != nil {
 		fmt.Println("Error! Invalid Registration Number. Try again")
 		goto Reg
@@ -47,7 +48,7 @@ Class:
 	fmt.Scanln(&s.entry_marks)
 	fmt.Println("=========================")
 	fmt.Println("Student's name:", s.name)
-	fmt.Println("\tRegistration Number:", s.Regno)
+	fmt.Println("\tRegistration Number:", S)
 	fmt.Println("\tClass: Form ", s.class+s.stream)
 	fmt.Println("\tKCPE Marks:", s.entry_marks)
 	fmt.Println("=========================")
