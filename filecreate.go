@@ -1,4 +1,4 @@
-//Ensure that it must be revisited
+//Ensure that it be revisited
 package main
 
 import (
