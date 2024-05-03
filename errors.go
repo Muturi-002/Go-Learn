@@ -7,7 +7,7 @@ import(
 	"errors"
 	"strconv"
 )
-func main(){
+func personDetError(){
 	err:=errors.New("Booom")
 	fmt.Println("The bomb goes", err)
 	
@@ -27,12 +27,42 @@ func main(){
 		return
 	}
 	fmt.Printf("Name: %s %s \n\tAge: %d\n",F_name,L_name,age)
-	result,err:= Divide(9,8)
-	fmt.Println("Result of division: ",result,err)
+}
+func main(){
+	var choice int
+	fmt.Print("Choose one of the following: \n1. Person Details\n2.Test Division\n:")
+	fmt.Scan(&choice)
+	switch choice {
+	case 1:
+		personDetError()
+		break
+	case 2:
+		defer handleError()
+		
+		res,err:=Divide(8,4)
+		//fmt.Println("Result of division: ",result,err)
+		fmt.Println("Result of division: ",res,err)
+		defer handleError()
+		result,err:= Divide(9,0)
+		fmt.Println("Result of division: ",result,err)
+		break
+	default:
+		fmt.Println("Invalid entry!")
+		main()
+	}
 }
 func Divide(a,b int)( int,error){
+	var err error= errors.New("Can't divide a number by zero")
 	if b==0{
-		return 0, errors.New("Can't divide a number by zero")
+		panic(err)
 	}
 	return a/b, nil
+}
+func handleError(){
+	e:=recover()
+	if e!=nil{
+		fmt.Println("Panic encountered: ",e,".\nPanic handled successfully")
+	}else{
+		fmt.Println("No panic encountered")
+	}
 }

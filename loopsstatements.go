@@ -6,6 +6,12 @@ func main() {
 	for i:=10;i>0;i-=2 {
 		fmt.Println("Running command ",i)
 	}
+	j:=0
+	for j<10{
+		fmt.Printf("'While' loop implemented by 'for' keyword: %d\n",j)
+		j++
+	}
+	fmt.Printf("final result of j: %d\n",j)
 	/*var subject float32
 	var total float32=0.0
 	for n:=0;n<5;n++ {
@@ -30,7 +36,7 @@ func main() {
 	
 	food_stuff := [4]string{"apple ", "banana ", "cake ", "donut "}
 	for m:=0; m<len(food_stuff); m++ {
-	fmt.Println(food_stuff)
+		fmt.Println(food_stuff[m])
 	}
 	for p, food_stuff:=range food_stuff{
 		fmt.Println(p, food_stuff)
