@@ -27,4 +27,12 @@ func main(){
 		return
 	}
 	fmt.Printf("Name: %s %s \n\tAge: %d\n",F_name,L_name,age)
+	result,err:= Divide(9,8)
+	fmt.Println("Result of division: ",result,err)
+}
+func Divide(a,b int)( int,error){
+	if b==0{
+		return 0, errors.New("Can't divide a number by zero")
+	}
+	return a/b, nil
 }

@@ -2,6 +2,7 @@ package main
 import "fmt"
 //from the file ifstatements.go, use grading system for switch
 func main() {
+	//Convert to C# and use switch case statements
 	var sub1, sub2, sub3, sub4, sub5, total float32
 	fmt.Println("Enter marks for Subject 1: ")
 	fmt.Scanln(&sub1)
