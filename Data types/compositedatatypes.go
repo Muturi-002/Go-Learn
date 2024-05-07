@@ -28,4 +28,5 @@ func main() {
 	f_Stuff:=map[int]string{1:"egg", 2:"fish", 3:"garlic", 4:"hoho"}
 	fmt.Println(f_Stuff)
 	fmt.Println(f_Stuff[1])
+	fmt.Println(len(food_stuff))
 }
