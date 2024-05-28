@@ -5,7 +5,7 @@ func splitanySlice[t any](slice []t)(){
 	for i,slice:=range slice{
 		fmt.Println(i,"-> ",slice)
 	}
-	fmt.Println("=====")
+	fmt.Println("======")
 }
 func main(){
 	fmt.Print("Start\n")
