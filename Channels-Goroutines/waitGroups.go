@@ -14,7 +14,7 @@ func main(){
 	Synchronization 'is in memory' hence need to treat it as a memory address
 	//Necessary to deference 'wait'*/
 	floats:=[]float32{2.44,83.9,02.93,0.002}
-	wait.Add(1)
+	wait.Add(1)//Allows for one 'object' to be passed through 'memory'
 	go goroutine(floats,&wait)
 	wait.Wait()
 	
