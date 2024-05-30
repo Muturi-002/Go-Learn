@@ -29,14 +29,15 @@ func main(){
 	ch <-"364"
 	ch <-"777"
 	
-	closeChannel(ch)
+	closeChannel(ch)//Not printing out
 }
 func closeChannel(channel chan string){
-	time.Sleep(2*time.Second)
+	
 	go func(){
 		for numbers:=range channel{
 			fmt.Println(numbers)
 		}
 	}()
+	time.Sleep(2*time.Second)
 	close(channel)
 }
